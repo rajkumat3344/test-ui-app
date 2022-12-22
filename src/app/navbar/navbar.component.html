@@ -1,0 +1,14 @@
+<nav class="NavbarItems">
+    <h1 class="navbar-logo">Trippy</h1>
+
+    <div class="menu-icon" (click)="toggleMenu()">
+        <i class="material-icons">{{!isMenuOpen ? "menu" : "close"}}</i>
+    </div>
+    <ul class="menu" [class.is-open]="isMenuOpen">
+       <li><a [routerLink]="['/']" routerLinkActive="activate" class="menu-items"><i class="fa-solid fa-house-user"></i>Home</a></li>
+       <li><a [routerLink]="['/about']" routerLinkActive="activate" class="menu-items"><i class="fa-solid fa-circle-info"></i>About</a></li>
+       <li><a [routerLink]="['/contact']" routerLinkActive="activate" class="menu-items"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+       <button [routerLink]="['/signup']" routerLinkActive="activate">SignUp</button>
+       <button [routerLink]="['/signup']" routerLinkActive="activate" class="nav-link-mobile">SignUp</button>
+    </ul>
+</nav>
